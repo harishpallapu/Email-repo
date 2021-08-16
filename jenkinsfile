@@ -46,5 +46,8 @@ pipeline {
 				    curl --upload-file jmeterreport-${BUILD_NUMBER}.zip -u admin:admin -v http://65.2.75.206:8081/repository/jenkins-reports/'''
             }
         }
+        stage('Email') {
+            steps {
+	               mail bcc: '', body: 'The bulid is success!', cc: '', from: '', replyTo: '', subject: 'jenkins job', to: 'nihas0505@gmail.com' 
     }
 }
