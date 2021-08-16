@@ -48,6 +48,6 @@ pipeline {
         }
         stage('Email') {
             steps {
-	               mail bcc: '', body: 'The bulid is success!', cc: '', from: '', replyTo: '', subject: 'jenkins job', to: 'nihas0505@gmail.com' 
+	               mail bcc: '', body: 'The bulid is Failure!', cc: '', from: '', replyTo: '', subject: 'jenkins job', to: 'nihas0505@gmail.com' 
     }
 }
